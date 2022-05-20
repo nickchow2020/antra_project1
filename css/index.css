@@ -467,6 +467,7 @@ h1 {
   -webkit-box-shadow: 0 0 10px 2px tomato;
           box-shadow: 0 0 10px 2px tomato;
   border: none;
+  cursor: pointer;
 }
 
 footer {
