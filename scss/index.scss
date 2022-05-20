@@ -44,7 +44,7 @@ main{
 
 
 header{
-  margin-top: 1rem;
+  margin: 1rem auto;
   text-align: center;
 
   a{
@@ -102,6 +102,13 @@ h1{
 
   .design{
     color: $secondary;
+  }
+
+  transition: box-shadow 150ms ease-in;
+
+  &:hover{
+    box-shadow: 0 0 10px 2px $primary;
+    border: none;
   }
 }
 

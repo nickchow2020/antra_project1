@@ -384,7 +384,7 @@ main {
 }
 
 header {
-  margin-top: 1rem;
+  margin: 1rem auto;
   text-align: center;
 }
 
@@ -427,6 +427,10 @@ h1 {
   padding: 1rem;
   -webkit-box-shadow: 0 0 2px 2px #DBDBDB;
           box-shadow: 0 0 2px 2px #DBDBDB;
+  -webkit-transition: -webkit-box-shadow 150ms ease-in;
+  transition: -webkit-box-shadow 150ms ease-in;
+  transition: box-shadow 150ms ease-in;
+  transition: box-shadow 150ms ease-in, -webkit-box-shadow 150ms ease-in;
 }
 
 .card p {
@@ -457,6 +461,12 @@ h1 {
 
 .card .design {
   color: #0C66D3;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 10px 2px tomato;
+          box-shadow: 0 0 10px 2px tomato;
+  border: none;
 }
 
 footer {
