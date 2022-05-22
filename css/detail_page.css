@@ -5,6 +5,18 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -341,25 +353,9 @@ template {
   display: none;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100%;
-}
-
 body {
   max-width: 1200px;
   margin: auto;
-  min-height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr auto;
-      grid-template-rows: 1fr auto;
 }
 
 a {
@@ -372,101 +368,111 @@ main {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1000px) {
-  main {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(230px, auto);
-    grid-gap: 1rem;
-  }
-}
-
 header {
-  margin: 1rem auto;
   text-align: center;
-}
-
-header a {
-  color: #878787;
-}
-
-@media only screen and (min-width: 768px) {
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-h1 {
+  margin: 1rem 0;
   text-decoration: underline;
 }
 
-.card {
-  width: 100%;
+header a {
+  color: gray;
+}
+
+.border {
+  border: solid 1px #cdcdcd;
+}
+
+.block {
+  display: block;
+}
+
+.old {
+  color: tomato;
+  background: transparent;
+  border: solid 1px tomato;
+}
+
+.new {
+  color: gray;
+  background: transparent;
+  border: solid 1px gray;
+}
+
+.blog {
+  line-height: 1.5;
+}
+
+.blog_heading1 {
+  padding: 0;
+  margin: 0;
+}
+
+.blog_date {
+  color: gray;
+  margin: 0;
+}
+
+.blog_descri1 {
+  margin: 1rem 0;
+}
+
+.blog_line {
+  border: none;
+  height: 1px;
+  background: #e6e6e6;
+}
+
+.blog_list {
+  margin-left: 3rem;
+}
+
+.blog_btn_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 1rem;
-  border: 2px solid #DBDBDB;
-  padding: 1rem;
-  -webkit-box-shadow: 0 0 2px 2px #DBDBDB;
-          box-shadow: 0 0 2px 2px #DBDBDB;
-  -webkit-transition: -webkit-box-shadow 150ms ease-in;
-  transition: -webkit-box-shadow 150ms ease-in;
-  transition: box-shadow 150ms ease-in;
-  transition: box-shadow 150ms ease-in, -webkit-box-shadow 150ms ease-in;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem 0;
 }
 
-.card .card_category {
-  margin: .5rem 0;
-  font-weight: 600;
-}
-
-.card .card_date {
-  color: #878787;
-  margin: 10px 0;
-}
-
-.card .card_description {
-  margin-bottom: 1rem;
-}
-
-.card .world {
-  color: tomato;
-}
-
-.card .design {
-  color: #0C66D3;
-}
-
-.card:hover {
-  -webkit-box-shadow: 0 0 10px 2px tomato;
-          box-shadow: 0 0 10px 2px tomato;
-  border: none;
+.blog_btn {
+  padding: .4rem 1rem;
+  outline: none;
+  border-radius: 15px;
+  margin-right: .5rem;
   cursor: pointer;
+}
+
+.sidebar {
+  line-height: 1.5;
+}
+
+.sidebar h2 {
+  margin: .5rem 0;
+}
+
+.sidebar_about {
+  background: #f3f3f3;
+  padding: 1rem 1.5rem;
+}
+
+.sidebar_descri1 {
+  margin: 1rem 0;
+}
+
+.sidebar_list {
+  list-style: none;
+}
+
+.sidebar_nav {
+  padding: 0 1.5rem;
 }
 
 footer {
   width: 100%;
-  background: rgba(128, 128, 128, 0.2);
-  border-top: solid 2px tomato;
-  text-align: center;
+  padding: 1rem 0;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,12 +482,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 0;
-  height: 5rem;
+  background: #e6e6e6;
   margin-top: 1rem;
+  border-top: solid 2px tomato;
 }
-
-footer p {
-  margin-bottom: 1rem;
-}
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=detail_page.css.map */

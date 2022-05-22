@@ -1,0 +1,129 @@
+@import "./normalize",
+        "./variable",
+        "./common_style";
+
+
+body{
+  max-width: 1200px;
+  margin: auto;
+}
+
+a{
+  color: $primary-color;
+}
+
+header,
+main{
+  width: 90%;
+  margin: 0 auto ;
+}
+
+header{
+  text-align: center;
+  margin: 1rem 0;
+  text-decoration: underline;
+  a{
+    color: $secondary-color;
+  }
+}
+
+.border{
+  border: solid 1px $secondary-color-lighter-30;
+}
+
+.block{
+  display: block;
+}
+
+.old{
+  color: $primary-color;
+  background: transparent;
+  border: solid 1px $primary-color;
+}
+
+.new{
+  color: $secondary-color;
+  background: transparent;
+  border: solid 1px $secondary-color;
+}
+
+.blog{
+  line-height: 1.5;
+
+  &_heading1{
+    padding: 0;
+    margin: 0;
+  }
+
+  &_date{
+    color: $secondary-color;
+    margin: 0;
+  }
+
+  &_descri1{
+    @include paragraph-layout
+  }
+
+  &_line{
+    border: none;
+    height: 1px;  
+    background: $secondary-color-lighter-40;
+  }
+
+  &_list{
+    margin-left: 3rem;
+  }
+
+  &_btn_wrapper{
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0;
+  }
+
+
+  &_btn{
+    padding: .4rem 1rem;
+    outline: none;
+    border-radius: 15px;
+    margin-right: .5rem;
+    cursor: pointer;
+  }
+}
+
+.sidebar{
+  line-height: 1.5;
+
+  h2{
+    margin: .5rem 0;
+  }
+
+  &_about{
+    background: $secondary-color-lighter-45;
+    padding: 1rem 1.5rem;
+  }
+
+  &_descri1{
+    @include paragraph-layout;
+  }
+
+  &_list{
+    list-style: none;
+  }
+
+  &_nav{
+    padding: 0 1.5rem;
+  }
+}
+
+
+footer{
+  width: 100%;
+  padding: 1rem 0;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $secondary-color-lighter-40;
+  margin-top: 1rem;
+  border-top: solid 2px $primary-color;
+}
