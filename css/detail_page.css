@@ -368,16 +368,6 @@ main {
   margin: 0 auto;
 }
 
-header {
-  text-align: center;
-  margin: 1rem 0;
-  text-decoration: underline;
-}
-
-header a {
-  color: gray;
-}
-
 .border {
   border: solid 1px #cdcdcd;
 }
@@ -396,6 +386,41 @@ header a {
   color: gray;
   background: transparent;
   border: solid 1px gray;
+}
+
+header {
+  text-align: center;
+  margin: 1rem 0;
+  text-decoration: underline;
+}
+
+header a {
+  color: gray;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr 1fr;
+        grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 .blog {

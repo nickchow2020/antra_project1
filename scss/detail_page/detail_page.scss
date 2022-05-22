@@ -18,15 +18,6 @@ main{
   margin: 0 auto ;
 }
 
-header{
-  text-align: center;
-  margin: 1rem 0;
-  text-decoration: underline;
-  a{
-    color: $secondary-color;
-  }
-}
-
 .border{
   border: solid 1px $secondary-color-lighter-30;
 }
@@ -45,6 +36,30 @@ header{
   color: $secondary-color;
   background: transparent;
   border: solid 1px $secondary-color;
+}
+
+header{
+  text-align: center;
+  margin: 1rem 0;
+  text-decoration: underline;
+  a{
+    color: $secondary-color;
+  }
+
+  @media only screen and (min-width:$media-narrow){
+    @include center-horizontal-evenly-layout{
+      margin: 0 auto;
+    }
+  }
+}
+
+
+main{
+  @media only screen and (min-width:$media-wide){
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 .blog{

@@ -7,7 +7,11 @@ $secondary-color-lighter-45: lighten($secondary-color,45%);
 
 $third-color: green;
 $fourth-color: blue;
-$fourth-color-lighter: lighten($fourth-color,10%)
+$fourth-color-lighter: lighten($fourth-color,10%);
+
+$media-narrow:768px;
+$media-wide: 1024px;
+
 
 // $base-dark: darken();
 // $base-light: lighten();

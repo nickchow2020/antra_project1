@@ -1,3 +1,10 @@
 @mixin paragraph-layout {
   margin: 1rem 0;
 }
+
+@mixin center-horizontal-evenly-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @content;
+}
